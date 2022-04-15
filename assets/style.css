@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --color1: hsl(185, 100%, 48%);
+  --color2: #b9f8d3;
+  --color3: #fffbe7;
+  --color4: #e78ea9;
+}
+
+body {
+  font-family: "Fira Code", monospace;
+}
+
+.btn {
+  background-color: var(--color1);
+  color: var(--white);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.active {
+  background-color: var(--color1);
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+  align-items: center;
+  color: var(--black);
+  background-color: var(--white);
+  height: 50px;
+  padding-right: 150px;
+}
+
+.navbar a {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.home {
+  min-height: 100vh;
+}
+
+.home .home-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.home .home-right h1 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+.home .home-right h2 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+  color: var(--color1);
+}
+
+.home .home-left .img {
+  width: 250px;
+  height: 220px;
+  background-color: var(--color1);
+  border-top-right-radius: 125px;
+  border-top-left-radius: 125px;
+}
+
+.home .home-left img {
+  width: 300px;
+  margin-top: -104px;
+  margin-left: -30px;
+  height: auto;
+}
+
+.home .home-right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  line-height: 35px;
+}
+
+#repository {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+#repository h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--black);
+  margin-bottom: 40px;
+}
+
+#repository img {
+  width: 200px;
+  height: 200px;
+  transition: all 0.3s;
+}
+
+#repository .col-3:hover img {
+  transform: scale(1.1);
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  justify-content: center;
+  min-height: 200px;
+}
+
+form{
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--color1);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-family: "Rubik", sans-serif;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 5px;
+  width: calc(100vw - 50px);
+}
+
+.col {
+  grid-column: span 6;
+}
+
+.col-3 {
+  grid-column: span 3;
+}
+
+@media screen and (max-width: 768px) {
+  .col {
+    grid-column: span 12;
+  }
+
+  .col-3 {
+    margin-top: 20px;
+    grid-column: span 12;
+  }
+
+  .navbar {
+    display: block;
+  }
+
+  .home .home-right {
+    margin-top: -150px;
+  }
+
+  #repository h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--black);
+  }
+}
