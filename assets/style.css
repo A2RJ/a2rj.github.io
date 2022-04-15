@@ -36,6 +36,10 @@ body {
   background-color: var(--color1);
 }
 
+.show {
+  display: block;
+}
+
 .fixed {
   position: fixed;
   top: 0;
@@ -184,6 +188,7 @@ input[type="email"] {
   grid-column: span 3;
 }
 
+
 @media screen and (max-width: 768px) {
   .col {
     grid-column: span 12;
@@ -196,6 +201,13 @@ input[type="email"] {
 
   .navbar {
     display: block;
+    background-color: transparent;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 5px;
+    padding: 0;
   }
 
   .home .home-right {
