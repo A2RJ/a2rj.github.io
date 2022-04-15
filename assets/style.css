@@ -36,10 +36,6 @@ body {
   background-color: var(--color1);
 }
 
-.show {
-  display: block;
-}
-
 .fixed {
   position: fixed;
   top: 0;
@@ -130,6 +126,13 @@ body {
   margin-bottom: 40px;
 }
 
+#repository .col-3:hover {
+  border-bottom: #e78ea9 solid 1px;
+  border-left: #e78ea9 solid 1px;
+  border-right: #e78ea9 solid 1px;
+  border-radius: 10px;
+}
+
 #repository img {
   width: 200px;
   height: 200px;
@@ -145,22 +148,33 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
+  margin-bottom: 40px;
   justify-content: center;
   min-height: 200px;
 }
+#contact h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--black);
+}
 
-form{
+form {
   display: flex;
   margin-top: 20px;
   flex-direction: column;
 }
-.footer{
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background-color: aqua;
+}
+
+a {
+  text-decoration: none;
 }
 
 input[type="email"] {
@@ -170,7 +184,6 @@ input[type="email"] {
   border: 1px solid var(--color1);
   margin-bottom: 10px;
   font-size: 1.2rem;
-  font-family: "Rubik", sans-serif;
 }
 
 .row {
@@ -188,7 +201,6 @@ input[type="email"] {
   grid-column: span 3;
 }
 
-
 @media screen and (max-width: 768px) {
   .col {
     grid-column: span 12;
@@ -200,13 +212,13 @@ input[type="email"] {
   }
 
   .navbar {
-    display: block;
-    background-color: transparent;
+    display: flex;
+    /* background-color: transparent; */
   }
 
   .navbar a {
-    display: block;
-    margin: 5px;
+    /* display: block;
+    margin: 5px;*/
     padding: 0;
   }
 
@@ -218,5 +230,46 @@ input[type="email"] {
     font-size: 2rem;
     font-weight: bold;
     color: var(--black);
+    margin-bottom: 0px;
+  }
+
+  #repository img {
+    width: 150px;
+    height: 150px;
+    transition: all 0.3s;
+    margin-top: 20px;
+  }
+
+  #repository .col-3:hover {
+    border-bottom: #e78ea9 solid 1px;
+    border-left: #e78ea9 solid 0px;
+    border-right: #e78ea9 solid 0px;
+    border-radius: 10px;
+  }
+}
+
+/* min and max media query */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .col {
+    grid-column: span 6;
+  }
+
+  .col-3 {
+    margin-top: 20px;
+    grid-column: span 6;
+  }
+
+  #repository h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 0px;
+  }
+
+  #repository .col-3:hover {
+    border-bottom: #e78ea9 solid 1px;
+    border-left: #e78ea9 solid 0px;
+    border-right: #e78ea9 solid 0px;
+    border-radius: 10px;
   }
 }
